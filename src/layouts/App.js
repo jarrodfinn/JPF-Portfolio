@@ -21,6 +21,9 @@ export default function App() {
         <Navigation />
         <Switch>
           <Container>
+            {/* <div className="gutter">
+
+            </div> */}
             <Route path="/about" name="About" component={About} />
             <Route path="/contact" name="Contact" component={Contact} />
             <Route path="/portfolio" name="Portfolio" component={Portfolio} />

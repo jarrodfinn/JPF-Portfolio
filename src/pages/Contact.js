@@ -1,9 +1,18 @@
 import React from "react";
 import { Form } from "semantic-ui-react";
 
-export default function Contact() {
+export default function Contact(event) {
+  event.default;
+  const handleSubmit = () => {
+    fetch('/contact', {
+      method: 'post',
+      body: JSON.stringify({
+        sunject: document.querySelector('input[name="subject"]').value
+      })
+    })
+  }
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Form.Field>
         <label>First Name</label>
         <input type="text" name="first-name" />
@@ -18,6 +27,7 @@ export default function Contact() {
       </Form.Field>
       <Form.TextArea label="Message" />
       <Form.Button type="submit">Contact</Form.Button>
+
     </Form>
   );
 }

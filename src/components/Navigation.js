@@ -1,21 +1,24 @@
 import React from "react";
 import { Menu } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-
-export default function Navigation() {
-  return (
-    <div>
-      <Menu attached="top">
-        <Menu.Item link>
-          <Link to="/about">About</Link>
-        </Menu.Item>
-        <Menu.Item link>
-          <Link to="/contact">Contact</Link>
-        </Menu.Item>
-        <Menu.Item link>
-          <Link to="/portfolio">Portfolio</Link>
-        </Menu.Item>
+import { Component } from "react";
+import "./styles/Navigation.css"
+export default class Navigation extends Component {
+  render() {
+    return (
+      <div>
+        <Menu className="top fixed">
+          <Menu.Item link>
+            <Link to="/about">About</Link>
+          </Menu.Item>
+          <Menu.Item link>
+            <Link to="/contact">Contact</Link>
+          </Menu.Item>
+          <Menu.Item link>
+            <Link to="/portfolio">Portfolio</Link>
+          </Menu.Item>
         </Menu>
-    </div>
-  );
+      </div>
+    );
+  }
 }
