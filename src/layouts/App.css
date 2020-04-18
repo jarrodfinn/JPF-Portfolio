@@ -13,3 +13,8 @@
   margin-top: 100px;
   margin-bottom: 60px;
 }
+
+.ui.card img{
+  width: 290px;
+  height: 166px
+}

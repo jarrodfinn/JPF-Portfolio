@@ -4,7 +4,11 @@ import { Menu } from "semantic-ui-react";
 export default function Footer() {
     return (
       <div>
-        <Menu fixed="bottom"></Menu>
+        <Menu fixed="bottom">
+          {/* <div>
+          <p>Jarrod Finn</p>
+          </div> */}
+        </Menu>
       </div>
     );
 };

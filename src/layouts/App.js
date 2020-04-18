@@ -8,9 +8,11 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
 /* Pages */
+import Welcome from "../pages/Welcome";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Portfolio from "../pages/Portfolio";
+import Submitted from "../pages/Submitted";
 
 export default function App() {
   return (
@@ -21,12 +23,11 @@ export default function App() {
         <Navigation />
         <Switch>
           <Container>
-            {/* <div className="gutter">
-
-            </div> */}
+            <Route path="/" name="Home" component={Welcome} />
             <Route path="/about" name="About" component={About} />
             <Route path="/contact" name="Contact" component={Contact} />
             <Route path="/portfolio" name="Portfolio" component={Portfolio} />
+            <Route path="/submitted" name="Submitted" component={Submitted} />
           </Container>
         </Switch>
         <Footer />
