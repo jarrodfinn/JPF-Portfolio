@@ -1,8 +1,8 @@
-const express = require('express');
-const bodyParser = require ('body-parser')
+const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const port = process.env.PORT || 8080;
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 const creds = require("../config/config");
 
 const transport = {
@@ -23,30 +23,14 @@ transporter.verify((error, success) => {
   }
 });
 
-
-// Body Parser Middleware 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
-app.post('/contact', (req, res) => {
-    console.log(req.body);
-    // //send the contact info the user submitted to your email
-    // req.body.firstName
-    res.end();
-});
-
-app.listen(port, () => {
-    console.log(`App listening on port ${port}`)
-
-})
-
 app.post("/send", (req, res, next) => {
-    var firstName = req.body.firstName;
-    var lastName = req.body.lastName;
-    
+  var firstName = req.body.firstName;
+  var lastName = req.body.lastName;
   var emailAddress = req.body.emailAddress;
   var subject = req.body.subject;
-  var content = `name: ${firstName, lastName} \n email: ${emailAddress} \n subject: ${content} `;
+  var content = `name: ${
+    (firstName, lastName)
+  } \n email: ${emailAddress} \n subject: ${content} `;
 
   var mail = {
     from: firstName,
@@ -67,5 +51,22 @@ app.post("/send", (req, res, next) => {
     }
   });
 });
+
+
+// Body Parser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.post("/contact", (req, res) => {
+  console.log(req.body);
+  // //send the contact info the user submitted to your email
+  // req.body.firstName
+  res.end();
+});
+
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
+});
+
 
 module.exports = app;
