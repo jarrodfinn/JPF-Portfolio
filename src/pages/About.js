@@ -5,11 +5,11 @@ const About = () => (
   <div>
     <Grid>
       <Grid.Column width={7}>
-        <Image src="/images/DCRice.jpeg" />
+        <Image src="" />
       </Grid.Column>
       <Grid.Column width={9}>
         <p>
-          My name is Jarrod Finn and I am brandnew to coding! I have chosen to begin
+          My name is Jarrod Finn and I am brand new to coding! I have chosen to begin
           the learning journey by taking a coding bootcamp through Penn LPS and
           Trilogy Education Services. The importance of learning how to code
           truly excites me and will surely enrich my career.

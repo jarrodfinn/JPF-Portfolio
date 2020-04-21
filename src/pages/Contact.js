@@ -26,26 +26,23 @@ export default function Contact() {
     })
       .then(function (response) {
         if (response.ok) {
-          return response.text();
+          return response.json();
         }
-        throw new Error(response.text());
+        throw new Error(response.json());
       })
       .then(function () {
         //redirect once submitted
         history.push("/submitted");
       })
       .catch(function (error) {
-        alert(error);
+        console.log(error);
         setLoading(false);
-      });
-  };
-
-  //  resetForm(){
-  //       document.getElementById('contact-form').reset();
-  //   }
+      })
+   };
+    
 
   return (
-    <Form onSubmit={handleSubmit} loading={loading}>
+    <Form id="contact-form" onSubmit={handleSubmit} loading={loading}>
       <Form.Field>
         <label>First Name</label>
         <input type="text" name="first-name" />

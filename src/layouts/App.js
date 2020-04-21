@@ -23,7 +23,7 @@ export default function App() {
         <Navigation />
         <Switch>
           <Container>
-            <Route path="/" name="Home" component={Welcome} />
+            <Route path ="/" exact name="Home" component={Welcome} />
             <Route path="/about" name="About" component={About} />
             <Route path="/contact" name="Contact" component={Contact} />
             <Route path="/portfolio" name="Portfolio" component={Portfolio} />

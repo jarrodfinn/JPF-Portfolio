@@ -3,17 +3,20 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = process.env.PORT || 8080;
 const nodemailer = require("nodemailer");
-const creds = require("../config/config");
 
-const transport = {
-  host: "smtp.gmail.com",
+// Body Parser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+var transporter = nodemailer.createTransport({
+  host: "smtp.sendgrid.net",
+  port: 587,
+  secure: false, // upgrade later with STARTTLS
   auth: {
-    user: creds.USER,
-    pass: creds.PASS,
+    user: "samurod@gmail.com",
+    pass: "D1scg0lf1980",
   },
-};
-
-var transporter = nodemailer.createTransport(transport);
+});
 
 transporter.verify((error, success) => {
   if (error) {
@@ -23,39 +26,37 @@ transporter.verify((error, success) => {
   }
 });
 
-app.post("/send", (req, res, next) => {
+app.post("/contact", (req, res, next) => {
+  console.log(req.body);
   var firstName = req.body.firstName;
   var lastName = req.body.lastName;
   var emailAddress = req.body.emailAddress;
   var subject = req.body.subject;
   var content = `name: ${
     (firstName, lastName)
-  } \n email: ${emailAddress} \n subject: ${content} `;
+  } \n email: ${emailAddress} \n subject: ${subject} `;
 
   var mail = {
-    from: firstName,
-    to: "RECEIVING_EMAIL_ADDRESS_GOES_HERE", //Change to email address that you want to receive messages on
+    from: "samurod@gmail.com",
+    to: "samurod@gmail.com", //Change to email address that you want to receive messages on
     subject: "New Message from Contact Form",
     text: content,
   };
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
+      console.log(err);
       res.json({
         msg: "fail",
       });
     } else {
+      console.group(data);
       res.json({
         msg: "success",
       });
     }
   });
 });
-
-
-// Body Parser Middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post("/contact", (req, res) => {
   console.log(req.body);
@@ -67,6 +68,5 @@ app.post("/contact", (req, res) => {
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
-
 
 module.exports = app;
