@@ -5,7 +5,7 @@ const About = () => (
   <div>
     <Grid>
       <Grid.Column width={7}>
-        <Image src="" />
+        <Image src="../images/DCRice.jpeg" />
       </Grid.Column>
       <Grid.Column width={9}>
         <p>
