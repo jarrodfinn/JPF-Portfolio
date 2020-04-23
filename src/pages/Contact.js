@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 export default function Contact() {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+  
 
 
   const handleSubmit = (e) => {
