@@ -1,12 +1,24 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const path = require("path");
 const port = process.env.PORT || 8080;
 const nodemailer = require("nodemailer");
 
 // Body Parser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
+});
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, "build")));
+app.get("/ping", function (req, res) {
+  return res.send("pong");
+});
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 var transporter = nodemailer.createTransport({
   host: "smtp.sendgrid.net",
@@ -65,8 +77,5 @@ app.post("/contact", (req, res) => {
   res.end();
 });
 
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
-});
 
 module.exports = app;
