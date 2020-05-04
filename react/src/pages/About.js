@@ -9,10 +9,10 @@ const About = () => (
       </Grid.Column>
       <Grid.Column width={9}>
         <p>
-          My name is Jarrod Finn and I am brand new to coding! I have chosen to begin
-          the learning journey by taking a coding bootcamp through Penn LPS and
+          My name is Jarrod Finn and I am on my way to becoming a coding master! I chose to begin
+          the learning journey by taking the Coding Bootcamp through Penn LPS and
           Trilogy Education Services. The importance of learning how to code
-          truly excites me and will surely enrich my career.
+          truly excites me and will surely enrich my career. My goal is to integrate the knowledge of coding with my love of and history with working in the wine industry.
         </p>
         <p>
           My goal is to be an asset to my existing company, as well as
