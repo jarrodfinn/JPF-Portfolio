@@ -2,7 +2,7 @@ import React from "react";
 import { Menu } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { Component } from "react";
-import "./styles/Navigation.css"
+import "./styles/style.css"
 export default class Navigation extends Component {
   render() {
     return (

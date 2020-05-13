@@ -1,7 +1,12 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
 const Portfolio = () => (
-  <Card.Group>
+  <Card.Group
+    style={{
+      paddingBottom: "60px",
+      align: "center",
+    }}
+  >
     <Card>
       <Image src="/images/GoBeer.jpeg" wrapped ui={false} />
       <Card.Content>
@@ -41,7 +46,9 @@ const Portfolio = () => (
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a href="https://www.cellarratwine.com/">Grab some suds! </a>
+        <a href="https://goodwinefinespirits.herokuapp.com/">
+          Grab some suds!{" "}
+        </a>
       </Card.Content>
     </Card>{" "}
     <Card>
@@ -67,7 +74,7 @@ const Portfolio = () => (
         <Card.Description></Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a href="https://drive.google.com/open?id=1nmtOf6ClDlIzS3zN55P71jQ6zptgChhz">
+        <a href="https://docs.google.com/document/d/1XPA8YRSIOZ76fcg6IUIq0EbJ5eA_4KfejXNcFe7l8iM/edit">
           Read my Resume
         </a>
       </Card.Content>
