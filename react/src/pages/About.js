@@ -20,17 +20,25 @@ const About = () => (
         <p>
           My name is Jarrod Finn and I am on my way to becoming a coding master!
           I chose to begin the learning journey by taking the Coding Bootcamp
-          through Penn LPS and Trilogy Education Services. The importance of
-          learning how to code truly excites me and will surely enrich my
-          career. My goal is to integrate the knowledge of coding with my love
-          of and history with working in the wine industry.
+          through Penn LPS and Trilogy Education Services. This is a six month
+          intensive program that surveys any coding language that you might come
+          across in the modern software and website development world.
+          <p>
+            {" "}
+            The importance of learning how to code truly excites me and will
+            surely enrich my career. My goal is to integrate the knowledge of
+            coding with my love of and history with working in the wine
+            industry.
+          </p>
         </p>
         <p>
           My goal is to be an asset to my existing company, as well as
-          facilitating in creating and maintaining websites, not only for my
-          current company, but also for the amazingly talented winemakers we are
-          lucky enough to import to the United States.
+          facilitating the creation and maintainence of websites, not only for
+          my current company, MFW Wine Company, but also for the amazingly
+          talented artisanal winemakers we are lucky enough to import to the
+          United States.
         </p>
+        <p>I am currently</p>
       </Grid.Column>
     </Grid>{" "}
   </div>
