@@ -6,7 +6,7 @@ export default function Footer() {
       <div>
         <Menu fixed="bottom fixed">
           <Menu.Item link>
-            <a href="https://docs.google.com/document/d/1XPA8YRSIOZ76fcg6IUIq0EbJ5eA_4KfejXNcFe7l8iM/">
+            <a href="https://docs.google.com/document/d/1dbcIKuYvC2h6RpV68vXkHm2lRJ67bA9M_Qk13ck4bE0/edit">
               Read my Resume
             </a>
           </Menu.Item>
