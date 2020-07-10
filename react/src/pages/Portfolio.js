@@ -52,6 +52,32 @@ const Portfolio = () => (
       </Card.Content>
     </Card>{" "}
     <Card>
+      <Image src="/images/linkedin.jpeg" wrapped ui={false} />
+      <Card.Content>
+        <Card.Header>Fitness Tracker</Card.Header>
+        <Card.Meta></Card.Meta>
+        <Card.Description>
+          Keep track on all your great workouts and progress!
+        </Card.Description>
+      </Card.Content>
+      <Card.Content extra>
+        <a href="https://jpf-workout-tracker.herokuapp.com/">Fitness Tracker</a>
+      </Card.Content>
+    </Card>{" "}
+    <Card>
+      <Image src="" wrapped ui={false} />
+      <Card.Content>
+        <Card.Header>Personal Budget</Card.Header>
+        <Card.Meta></Card.Meta>
+        <Card.Description>
+          See how you can stay on top of your monthly budget.
+        </Card.Description>
+      </Card.Content>
+      <Card.Content extra>
+        <a href="https://jpf-budget-tracker.herokuapp.com/">See how I stay on financial track!</a>
+      </Card.Content>
+    </Card>{" "}
+    <Card>
       <Image src="/images/Stern.jpeg" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Employee Tracker</Card.Header>
@@ -64,32 +90,6 @@ const Portfolio = () => (
         <a href="https://jpf-employee-directory.herokuapp.com/">
           Employee Tracker
         </a>
-      </Card.Content>
-    </Card>{" "}
-    <Card>
-      <Image src="" wrapped ui={false} />
-      <Card.Content>
-        <Card.Header>Curriculum Vitae</Card.Header>
-        <Card.Meta></Card.Meta>
-        <Card.Description></Card.Description>
-      </Card.Content>
-      <Card.Content extra>
-        <a href="https://docs.google.com/document/d/1XPA8YRSIOZ76fcg6IUIq0EbJ5eA_4KfejXNcFe7l8iM/edit">
-          Read my Resume
-        </a>
-      </Card.Content>
-    </Card>{" "}
-    <Card>
-      <Image src="/images/linkedin.jpeg" wrapped ui={false} />
-      <Card.Content>
-        <Card.Header>LinkedIn</Card.Header>
-        <Card.Meta></Card.Meta>
-        <Card.Description>
-          If you want to know more about what else I've done, click the link.
-        </Card.Description>
-      </Card.Content>
-      <Card.Content extra>
-        <a href="https://www.linkedin.com/in/jarrod-finn-41175665/">LinkedIn</a>
       </Card.Content>
     </Card>{" "}
   </Card.Group>
