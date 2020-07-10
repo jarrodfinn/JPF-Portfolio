@@ -52,7 +52,7 @@ const Portfolio = () => (
       </Card.Content>
     </Card>{" "}
     <Card>
-      <Image src="/images/linkedin.jpeg" wrapped ui={false} />
+      <Image src="/images/workout.jpeg" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Fitness Tracker</Card.Header>
         <Card.Meta></Card.Meta>
@@ -65,7 +65,7 @@ const Portfolio = () => (
       </Card.Content>
     </Card>{" "}
     <Card>
-      <Image src="" wrapped ui={false} />
+      <Image src="/images/budget.jpeg" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Personal Budget</Card.Header>
         <Card.Meta></Card.Meta>
