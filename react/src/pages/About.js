@@ -18,7 +18,10 @@ const About = () => (
       </Grid.Column>
       <Grid.Column width={10}>
         <p>
-          My name is Jarrod Finn and I am on my way to becoming a coding master!
+          Hi! My name is Jarrod Finn. I am on my way to becoming a coding
+          master!
+        </p>
+        <p>
           I chose to begin the learning journey by taking the Coding Bootcamp
           through Penn LPS and Trilogy Education Services. This is a six month
           intensive program that surveys any coding language that you might come
