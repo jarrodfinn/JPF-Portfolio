@@ -26,7 +26,7 @@ var transporter = nodemailer.createTransport({
   secure: false, // upgrade later with STARTTLS
   auth: {
     user: "samurod@gmail.com",
-    pass: "D1scg0lf1980",
+    pass: "D1scg0lf",
   },
 });
 

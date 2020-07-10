@@ -1,3 +1,10 @@
 .fixed{
     margin-bottom: 80px;
 }
+
+main{
+    display: flex;
+}
+.clearfix {
+  overflow: auto;
+}
