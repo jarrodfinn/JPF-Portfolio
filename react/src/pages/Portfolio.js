@@ -32,6 +32,7 @@ const Portfolio = () => (
       </Card.Content>
       <Card.Content extra>
         <a href="https://frightfinder.herokuapp.com/">FrightFinder</a>
+        <br />
         <a href="https://github.com/Colin-Cunningham/FrightFinder">GitHub</a>
       </Card.Content>
     </Card>{" "}
@@ -48,6 +49,7 @@ const Portfolio = () => (
       </Card.Content>
       <Card.Content extra>
         <a href="https://goodwinefinespirits.herokuapp.com/">
+          <br />
           <a href="https://github.com/jarrodfinn/Project-3">GitHub</a>
           Grab some suds!{" "}
         </a>
@@ -64,6 +66,7 @@ const Portfolio = () => (
       </Card.Content>
       <Card.Content extra>
         <a href="https://jpf-workout-tracker.herokuapp.com/">Fitness Tracker</a>
+        <br />
         <a href="https://github.com/jarrodfinn/Homework-17">GitHub</a>
       </Card.Content>
     </Card>{" "}
@@ -78,6 +81,7 @@ const Portfolio = () => (
       </Card.Content>
       <Card.Content extra>
         <a href="https://jpf-budget-tracker.herokuapp.com/">
+          <br />
           <a href="https://jarrodfinn.github.io/Homework-18/">GitHub</a>
           See how I stay on financial track!
         </a>
@@ -94,6 +98,7 @@ const Portfolio = () => (
       </Card.Content>
       <Card.Content extra>
         <a href="https://jpf-employee-directory.herokuapp.com/">
+          <br />
           <a href="https://github.com/jarrodfinn/Homework-19">GitHub</a>
           Employee Tracker
         </a>
