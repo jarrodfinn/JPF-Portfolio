@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/jarrodfinn/Homework-20/issues"
   },
-  "homepage": "https://github.com/jarrodfinn/Homework-20#readme"
+  "homepage": "https://github.com/jarrodfinn/Homework-20#readme",
+  "dependencies": {
+    "react-native": "^0.63.2",
+    "react-native-email-link": "^1.9.2"
+  }
 }

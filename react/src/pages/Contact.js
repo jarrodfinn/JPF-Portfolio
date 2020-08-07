@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import { Form } from "semantic-ui-react";
+import React, { useState, Linking } from "react";
+// import { Linking } from "react-native";
+import { Button, Card, Form } from "semantic-ui-react";
 import { useHistory } from "react-router-dom";
+// import { openInbox } from "react-native-email-link";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -43,25 +45,48 @@ export default function Contact() {
     
 
   return (
-    <Form id="contact-form" onSubmit={handleSubmit} loading={loading}>
-      <Form.Field>
-        <label>First Name</label>
-        <input type="text" name="first-name" />
-      </Form.Field>
+    <div>
+      <Card>
+        <Card.Content>
+          <Card.Header>Let's Stay Connected!</Card.Header>
+          <Card.Meta>Fill out the form below!</Card.Meta>
 
-      <Form.Field>
-        <label>Last Name</label>
-        <input type="text" name="last-name" />
-      </Form.Field>
+          <Card.Description>Or here is my email address:</Card.Description>
+          <a href="mailto:jarrod.p.finn@gmail.com?subject=SendMail&body=Description">
+            jarrod.p.finn@gmail.com
+          </a>
+        </Card.Content>
+        <Card.Content extra>
+          {/* <Button
+            onPress={() =>
+              Linking.openURL(
+                "mailto:jarrod.p.finn@gmail.com?subject=SendMail&body=Description"
+              )
+            }
+            title="jarrod.p.finn@gmail.com"
+          /> */}
+        </Card.Content>
+      </Card>{" "}
+      <Form id="contact-form" onSubmit={handleSubmit} loading={loading}>
+        <Form.Field>
+          <label>First Name</label>
+          <input type="text" name="first-name" />
+        </Form.Field>
 
-      <Form.Field>
-        <label>Email Address</label>
-        <input type="email" name="email-address" />
-      </Form.Field>
+        <Form.Field>
+          <label>Last Name</label>
+          <input type="text" name="last-name" />
+        </Form.Field>
 
-      <Form.TextArea name="subject" label="Message" />
+        <Form.Field>
+          <label>Email Address</label>
+          <input type="email" name="email-address" />
+        </Form.Field>
 
-      <Form.Button type="submit">Contact</Form.Button>
-    </Form>
+        <Form.TextArea name="subject" label="Message" />
+
+        <Form.Button type="submit">Contact</Form.Button>
+      </Form>
+    </div>
   );
 }
